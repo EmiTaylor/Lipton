@@ -49,10 +49,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+//  $route['default_controller'] = 'welcome';
+// $route['404_override'] = '';
+// $route['translate_uri_dashes'] = FALSE;
+// $route['(:any)'] = 'Lipton/views/$1';
+// $route['blackbooks'] = 'blackbooks';
+//  $route['Blackbooks'] = 'Blackbooks/index';
+// $route['Blackbooks/(:any)'] = 'blackbooks/view/$1';
+
+
+$route['default_controller'] = 'Lipton/home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-$route['(:any)'] = 'Lipton/views/$1';
-$route['Blackbooks/index'] = 'blackbooks';
-$route['Blackbooks'] = 'Blackbooks/index';
-$route['(:any)'] = 'blackbooks/view/$1';
+// $route['(:any)'] = 'test/view/$1';
+// $route['default_controller'] = 'test/view';
+$route['blackbooks/delete/(:any)'] = 'blackbooks/delete/$1';
+$route['blackbooks/create'] = 'blackbooks/create';
+$route['blackbooks'] = 'blackbooks';
+$route['blackbooks/(:any)'] = 'blackbooks/view/$1';

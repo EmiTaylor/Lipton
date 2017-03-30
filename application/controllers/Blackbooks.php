@@ -11,7 +11,7 @@ class Blackbooks extends CI_Controller{
     }
     public function index(){
         $data['books'] = $this->Blackbooks_Model->get_books();
-        $data['title'] = 'Books categories';
+        $data['title'] = 'Books list';
 
         $this->load->view('templates/header', $data);
         $this->load->view('blackbooks/index', $data);
@@ -36,17 +36,17 @@ class Blackbooks extends CI_Controller{
 	public function create($id = NULL){
         $this->load->helper('form');
         $this->load->library('form_validation');
-        $data['title']='crée un livre';
+        $data['title']='Créer un livre';
 
         if ($id) {
         $data['book'] = $this->Blackbooks_Model->get_books($id);
 	    }
 
         $data['titre'] = 'Créer un nouveau livre';
-        // $data['categorie'] = $this->Blackbooks_Model->get_cats();
+
         $this->form_validation->set_rules('titre', 'titre', 'required');
         $this->form_validation->set_rules('auteur', 'auteur', 'required');
-        // $this->form_validation->set_rules('categorie', 'categorie', 'required');
+
 
         if ($this->form_validation->run() === FALSE){
             $this->load->view('templates/header', $data);

@@ -11,7 +11,7 @@ class Blackbooks extends CI_Controller{
     }
     public function index(){
         $data['books'] = $this->Blackbooks_Model->get_books();
-        $data['title'] = 'Books list';
+        $data['title'] = 'BOOKS LIST';
 
         $this->load->view('templates/header', $data);
         $this->load->view('blackbooks/index', $data);

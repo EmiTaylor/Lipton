@@ -6,7 +6,7 @@
 ?>
 <?php echo form_open('Blackbooks/create'); ?>
 <br><br>
-    <div id="create">
+    <div class="create">
         <br><br><br>
             <table>
                 <tr>
@@ -18,10 +18,8 @@
                     <td class="big"><label for="auteur">Auteur</label></td>
                     <td><input type="input" value="<?php echo $book['auteur']; ?>"name="auteur"/></td>
                 </tr>
-                
                 <tr>
                     <td class="btn"><input type="submit" name="submit" value="Créer un nouveau livre" /></td>
                 </tr>
             </table>
-</form>
-</div>
+    </div>

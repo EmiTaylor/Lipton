@@ -7,5 +7,5 @@
     <body>
         <div id='page'>
             <h1><?php echo $title; ?></h1>
-
+            <br><br>
             <div class="container">

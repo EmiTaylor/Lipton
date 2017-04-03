@@ -67,3 +67,4 @@ $route['blackbooks/delete'] = 'blackbooks/delete/$1';
 $route['blackbooks/create'] = 'blackbooks/create';
 $route['blackbooks'] = 'blackbooks';
 $route['blackbooks/(:any)'] = 'blackbooks/view/$1';
+$route['blackbooks/update/(:any)'] = 'blackbooks/create/$1';

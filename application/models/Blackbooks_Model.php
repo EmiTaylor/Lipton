@@ -21,9 +21,9 @@ class Blackbooks_Model extends CI_Model
 		$this->load->helper('url');
 
 		$data = array(
-			'title' => $this->input->post('title'),
+			'title' => $this->input->post('titre'),
             'auteur' => $this->input->post('auteur'),
-			'categorie' => $this->input->post('categorie'),
+
 		);
 		if ($id === 0) {
 			return $this->db->insert('books', $data);

@@ -27,7 +27,7 @@ class Blackbooks extends CI_Controller{
         $data['title'] = $data['books_item']['titre'];
 
         $this->load->view('templates/header', $data);
-        $this->load->view('blackbooks/view', $data);
+        $this->load->view('blackbooks/view');
         $this->load->view('templates/footer');
     }
     /**
@@ -63,23 +63,22 @@ class Blackbooks extends CI_Controller{
 	 */
 	public function read()
 	{
+        $data['title'] = $data['books_item']['titre'];
 
+        $this->load->view('templates/header');
+        $this->load->view('blackbooks/view');
+        $this->load->view('templates/footer');
 	}
 
-	/**
-	 *	Modifie une ou plusieurs lignes dans la base de données.
-	 */
-	public function update()
-	{
-
-	}
 
 	/**
 	 *	Supprime une ou plusieurs lignes de la base de données.
 	 */
-	public function delete()
+	public function delete($id)
 	{
         $this->Blackbooks_Model->delete($id);
         redirect('blackbooks', 'refresh');
+
+
 	}
 }

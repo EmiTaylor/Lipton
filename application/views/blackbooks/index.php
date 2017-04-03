@@ -2,18 +2,20 @@
         echo "Le livre à été ajouté avec succès !";
         } ?>
 <?php foreach($books as $books_item): ?>
-<div id="books">
+
+<div class="books">
     <div class="main">
-        <br><br><br><br>
-        <?php echo $books_item['titre'].$books_item['categorie']; ?>
+        <?php echo $books_item['titre'].$books_item['categorie']; ?><br><br>
         <?php echo $books_item['auteur'].$books_item['categorie']; ?>
     </div>
-    <br><br><br><br><br><br>
+    <div class="liens">
     <p><a href="<?php echo site_url('blackbooks/'.$books_item['id']); ?>">Voir</a></p>
     <p><a href="<?php echo site_url('blackbooks/update/'.$books_item['id']); ?>">Modifier</a></p>
     <p><a href="<?php echo site_url('blackbooks/delete/'.$books_item['id']); ?>">Supprimer</a></p>
+    </div>
 </div>
 <?php endforeach; ?>
-<br><br><br>
-<h2><a href="<?php echo site_url('blackbooks/create'); ?>">Ajouter un nouveau livre</a></h2>
+<div class="ajout">
+    <h2><a class="url" href="<?php echo site_url('blackbooks/create'); ?>">Ajouter un nouveau livre</a></h2>
+</div>
 <br><br>

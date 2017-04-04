@@ -10,4 +10,4 @@ Blackbooks library
 - View book resume
 
 
-<img src="img/mybook.jpg?raw=true" />
+<img src="img/mybook.png?raw=true" />

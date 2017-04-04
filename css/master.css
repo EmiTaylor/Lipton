@@ -53,8 +53,8 @@ display: inline;
     display:inline-table;
     border-radius: 10%;
     border-top: 30px;
-    width: 14em;
-    height:14em;
+    width: 12em;
+    height:12em;
     margin: 1em;
     padding: 1em 0;
     position: relative;
@@ -122,8 +122,8 @@ td.btn {
 }
 
 a, a:link, a:visited, a:active {
-    color: #91620a;
-    text-shadow: 1px 1px 0 black;
+    color: /*#91620a;*/ black;
+    /*text-shadow: 1px 1px 0 black;*/
     text-decoration: none;
 }
 

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.4.1deb2ubuntu2
--- http://www.phpmyadmin.net
+-- version 4.6.6deb4
+-- https://www.phpmyadmin.net/
 --
--- Client :  localhost
--- Généré le :  Ven 31 Mars 2017 à 09:16
--- Version du serveur :  5.7.17-0ubuntu0.16.04.1
--- Version de PHP :  7.0.15-0ubuntu0.16.04.4
+-- Client :  localhost:3306
+-- Généré le :  Ven 16 Juin 2017 à 11:51
+-- Version du serveur :  5.7.18-0ubuntu0.17.04.1
+-- Version de PHP :  7.0.18-0ubuntu0.17.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -31,24 +31,27 @@ CREATE TABLE `books` (
   `titre` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `auteur` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `categorie` int(11) DEFAULT NULL,
-  `cover` varchar(500) COLLATE utf8_unicode_ci DEFAULT NULL
+  `cover` varchar(500) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `resume` text COLLATE utf8_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Contenu de la table `books`
 --
 
-INSERT INTO `books` (`id`, `titre`, `auteur`, `categorie`, `cover`) VALUES
-(2, 'ana polina', 'marc dorcel', 10, 'img/books.jpg'),
-(3, 'clara morgane', 'la cambrioleuse', 2, NULL),
-(4, 'la vache', 'ricoune', 3, NULL),
-(5, 'poulet a l\'ananas', 'yannick', 4, NULL),
-(6, 'les serviettes', 'patrick sebastien', 3, NULL),
-(7, 'les marqueurs', 'yannick', 4, NULL),
-(8, 'developpeur', 'BEWEB', 3, NULL),
-(9, 'beziers', 'FERIA', 3, NULL),
-(10, 'test', 'je sais pas', 2, NULL),
-(16, '#Storyboard', 'Emi Taylor', 3, NULL);
+INSERT INTO `books` (`id`, `titre`, `auteur`, `categorie`, `cover`, `resume`) VALUES
+(1, 'Alléluja', 'Jesus', 8, 'img/kk.jpg', NULL),
+(2, 'Black', 'Book', 8, 'img/aa.jpg', NULL),
+(3, 'Uuuh', 'Dear', 2, 'img/bb.png', NULL),
+(4, 'The Barber', 'Estelle', 7, 'img/cc.jpg', NULL),
+(5, 'Emi', 'Taylor', 16, 'img/dd.jpg', NULL),
+(6, 'Rendez l\'argent', 'Pénélope', 2, 'img/ee.jpg', NULL),
+(7, 'Vive', 'la France', 4, 'img/ff.jpg', NULL),
+(8, 'Illuminatis', 'Oaxaca', 3, 'img/gg.jpg', NULL),
+(9, 'My super', 'book', 3, 'img/hh.jpg', NULL),
+(10, 'Dev', 'Web', 3, 'img/ii.jpg', NULL),
+(16, 'Storyboard', '#', 3, 'img/jj.jpg', NULL),
+(17, 'God', 'SavetheQueen', 3, 'img/ll.jpg', NULL);
 
 -- --------------------------------------------------------
 
@@ -66,11 +69,11 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `nom`) VALUES
-(2, 'sexe'),
-(3, 'je sais pas'),
-(4, 'manger'),
-(5, 'test'),
-(6, 'Motherfucker'),
+(2, 'erotique'),
+(3, 'Argent sale'),
+(4, 'Fantastique'),
+(5, 'Roman'),
+(6, 'Policier'),
 (7, 'PasDeBonneOuDeMauvaiseSituation');
 
 -- --------------------------------------------------------
@@ -160,7 +163,7 @@ ALTER TABLE `status`
 -- AUTO_INCREMENT pour la table `books`
 --
 ALTER TABLE `books`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT pour la table `categories`
 --

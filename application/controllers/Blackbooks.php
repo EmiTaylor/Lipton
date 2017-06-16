@@ -57,7 +57,6 @@ class Blackbooks extends CI_Controller{
             redirect('blackbooks', 'refresh');
         }
     }
-
 	/**
 	 *	Récupère des données dans la base de données.
 	 */
@@ -69,8 +68,6 @@ class Blackbooks extends CI_Controller{
         $this->load->view('blackbooks/view');
         $this->load->view('templates/footer');
 	}
-
-
 	/**
 	 *	Supprime une ou plusieurs lignes de la base de données.
 	 */
